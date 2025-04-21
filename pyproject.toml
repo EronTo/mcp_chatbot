@@ -21,6 +21,8 @@ dependencies = [
     "uvicorn>=0.32.1",
     "openai>=1.66.3",
     "streamlit>=1.43.2",
+    "r2r>=0.1.0",
+    "PyJWT>=2.10.1",
 ]
 
 [project.scripts]

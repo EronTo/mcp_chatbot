@@ -1,13 +1,28 @@
 {
     "mcpServers": {
         "markdown_processor": {
-            "command": "/path/to/your/uv/path",
+            "command": "/opt/homebrew/bin/uv",
             "args": [
                 "--directory",
-                "/path/to/your/mcp_chatbot/mcp_servers",
+                "/Users/guyin/code/python/polychat/mcp/mcp_chatbot/mcp_servers/",
                 "run",
                 "markdown_processor.py"
             ]
+        },
+        "r2r_processor": {
+            "command": "/opt/homebrew/bin/uv",
+            "args": [
+                "--directory",
+                "/Users/guyin/code/python/polychat/mcp/mcp_chatbot/mcp_servers/",
+                "run",
+                "r2r_processor.py"
+            ],
+            "env": {
+                "R2R_BASE_URL": "http://host.docker.internal:7272",
+                "R2R_USERNAME": "admin@example.com",
+                "R2R_PASSWORD": "change_me_immediately",
+                "R2R_SEARCH_LIMIT": "10"
+            }
         }
     }
 }
